@@ -11,7 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // 作成したシーダークラスを実行する（artisanコマンドを用いることで）
         $this->call([
             TodoSeeder::class,
         ]);

@@ -11,8 +11,7 @@ class TodoSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('todos')->truncate(); // 追記
-
+        DB::table('todos')->truncate(); 
         $testData = [
         [
             'content' => 'PHP Appセクションを終える',
@@ -26,7 +25,7 @@ class TodoSeeder extends Seeder
         ],
       ];
 
-      DB::table('todos')->insert($testData); // 追記
+      DB::table('todos')->insert($testData); 
     }
 }
 
