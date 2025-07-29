@@ -13,8 +13,6 @@ class TodoRequest extends FormRequest
      */
     public function authorize()
     {   
-        // 修正
-        // ここがfalseのままだと全てのリクエストを受け付けなくなってしまうので注意
         return true;
     }
 
@@ -25,7 +23,6 @@ class TodoRequest extends FormRequest
      */
     public function rules()
     {
-        // 修正
         return [
             'content' => 'required|max:255',
         ];
@@ -34,7 +31,6 @@ class TodoRequest extends FormRequest
     public function messages()
     {
         return [
-            // 入力欄のname属性.ルール => メッセージ
             'content.required' => 'ToDoが入力されていません。',
             'content.max' => 'ToDoは :max 文字以内で入力してください。',
         ];
